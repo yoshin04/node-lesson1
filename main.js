@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const ejs = require('ejs');
 const login = require('./routes/login');
 const register = require('./routes/register');
 const layouts = require('express-ejs-layouts');
 
+app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 app.use(layouts);
 app.use('/login', login);
